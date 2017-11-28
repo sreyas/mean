@@ -14,9 +14,9 @@
     vm.updateUserProfile = updateUserProfile;
 
     // Update a user profile
-    /*function updateUserProfile(isValid) {
+    function updateUserProfile(isValid) {
 
-      if (!isValid) {
+      /*if (!isValid) {
         $scope.$broadcast('show-errors-check-validity', 'vm.userForm');
 
         return false;
@@ -31,7 +31,7 @@
         Authentication.user = response;
       }, function (response) {
         Notification.error({ message: response.data.message, title: '<i class="glyphicon glyphicon-remove"></i> Edit profile failed!' });
-      });
-    }*/
+      });*/
+    }
   }
 }());
