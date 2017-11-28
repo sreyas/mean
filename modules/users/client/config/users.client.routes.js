@@ -60,7 +60,7 @@
       .state('settings.bio', {
         url: '/bio',
         templateUrl: '/modules/users/client/views/settings/change-bio.client.view.html',
-        controller: 'ChangeBio',
+        controller: 'ChangeBioController',
         controllerAs: 'vm',
         data: {
           pageTitle: 'Bio'
