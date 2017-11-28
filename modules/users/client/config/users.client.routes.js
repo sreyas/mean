@@ -57,6 +57,15 @@
           pageTitle: 'Settings picture'
         }
       })
+      .state('settings.bio', {
+        url: '/bio',
+        templateUrl: '/modules/users/client/views/settings/change-bio.client.view.html',
+        controller: 'ChangeBioController',
+        controllerAs: 'vm',
+        data: {
+          pageTitle: 'Bio'
+        }
+      })
       .state('authentication', {
         abstract: true,
         url: '/authentication',

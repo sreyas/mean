@@ -18,7 +18,6 @@
 
       if (!isValid) {
         $scope.$broadcast('show-errors-check-validity', 'vm.userForm');
-
         return false;
       }
 
