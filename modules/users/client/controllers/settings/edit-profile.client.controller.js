@@ -22,10 +22,10 @@
         return false;
       }
 
-      var user = new UsersService(vm.user);
+     /* var user = new UsersService(vm.user);
 
       user.$update(function (response) {
-        $scope.$broadcast('show-errors-reset', 'vm.userForm');
+        $scope.$broadcast('show-errors-reset', 'vm.userForm');*/
 
         Notification.success({ message: '<i class="glyphicon glyphicon-ok"></i> Edit profile successful!' });
         Authentication.user = response;
