@@ -16,13 +16,12 @@
     // Update a user profile
     function updateUserProfile(isValid) {
 
-      /*if (!isValid) {
+      if (!isValid) {
         $scope.$broadcast('show-errors-check-validity', 'vm.userForm');
-
         return false;
       }
 
-      var user = new UsersService(vm.user);
+      /*var user = new UsersService(vm.user);
 
       user.$update(function (response) {
         $scope.$broadcast('show-errors-reset', 'vm.userForm');
