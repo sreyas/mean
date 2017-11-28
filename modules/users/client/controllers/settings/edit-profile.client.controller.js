@@ -21,7 +21,7 @@
         return false;
       }
 
-      var user = new UsersService(vm.user);
+      /*var user = new UsersService(vm.user);
 
       user.$update(function (response) {
         $scope.$broadcast('show-errors-reset', 'vm.userForm');
@@ -30,7 +30,7 @@
         Authentication.user = response;
       }, function (response) {
         Notification.error({ message: response.data.message, title: '<i class="glyphicon glyphicon-remove"></i> Edit profile failed!' });
-      });
+      });*/
     }
   }
 }());
