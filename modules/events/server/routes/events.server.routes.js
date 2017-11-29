@@ -4,8 +4,9 @@
  * Module dependencies
  */
 var eventsPolicy = require('../policies/events.server.policy'),
+  eventcategory = require('../controllers/events.server.controller'),
   events = require('../controllers/events.server.controller');
-  eventcategory = require('../controllers/events.server.controller');
+ 
 
 module.exports = function (app) {
   // Events collection routes
