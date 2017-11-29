@@ -6,7 +6,7 @@
 var path = require('path'),
   mongoose = require('mongoose'),
   Event = mongoose.model('Event'),
-  EventCategory = mongoose.model('EventCategory')
+  EventCategory = mongoose.model('EventCategory'),
   errorHandler = require(path.resolve('./modules/core/server/controllers/errors.server.controller'));
 
 /**
