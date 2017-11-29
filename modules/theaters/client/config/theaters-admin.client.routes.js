@@ -17,7 +17,7 @@
       .state('admin.theaters.list', {
         url: '',
         templateUrl: '/modules/theaters/client/views/admin/list-theaters.client.view.html',
-        controller: 'TheaterAdminController',
+        controller: 'TheatersAdminListController',
         controllerAs: 'vm',
         data: {
           roles: ['admin']
