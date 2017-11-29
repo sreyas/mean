@@ -51,6 +51,6 @@ module.exports = function (app) {
     .get(eventcategory.list)
     .post(eventcategory.create);
     
-//app.param('eventcategoryId', eventcategory.eventcategoryByID);
+  app.param('eventcategoryId', eventcategory.eventcategoryByID);
 
 };
