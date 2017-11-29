@@ -5,7 +5,7 @@
     .module('events')
     .controller('EventsController', EventsController);
 
-  EventsController.$inject = ['$scope', 'theaterResolve', 'Authentication'];
+  EventsController.$inject = ['$scope', 'eventResolve', 'Authentication'];
 
   function EventsController($scope, theater, Authentication) {
     var vm = this;
