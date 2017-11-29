@@ -13,11 +13,23 @@ module.exports = function (app) {
     .post(events.create);
 
   // Single event routes
-  app.route('/api/events/:eventId').all(eventsPolicy.isAllowed)
+  app.route('/api/events/:eventcategoryId').all(eventsPolicy.isAllowed)
     .get(events.read)
     .put(events.update)
     .delete(events.delete);
 
   // Finish by binding the event middleware
   app.param('eventId', events.eventByID);
+   app.route('/api/eventcategory').all(eventsPolicy.isAllowed)
+    .get(eventcategory.list)
+    .post(eventcategory.create);
+
+  // Single event routes
+  app.route('/api/eventcategory/:eventcategoryId').all(eventsPolicy.isAllowed)
+    .get(eventcategory.read)
+    .put(eventcategory.update)
+    .delete(eventcategory.delete);
+
+  // Finish by binding the event middleware
+  app.param('eventcategoryId', eventcategory.eventcategoryByID);
 };

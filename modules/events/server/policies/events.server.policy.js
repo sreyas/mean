@@ -40,6 +40,34 @@ exports.invokeRolesPolicies = function () {
       permissions: ['get']
     }]
   }]);
+    acl.allow([{
+    roles: ['admin'],
+    allows: [{
+      resources: '/api/eventcategory',
+      permissions: '*'
+    }, {
+      resources: '/api/eventcategory/:eventcategoryId',
+      permissions: '*'
+    }]
+  }, {
+    roles: ['user'],
+    allows: [{
+      resources: '/api/eventcategory',
+      permissions: ['get']
+    }, {
+      resources: '/api/eventcategory/:eventcategoryId',
+      permissions: ['get']
+    }]
+  }, {
+    roles: ['guest'],
+    allows: [{
+      resources: '/api/eventcategory',
+      permissions: ['get']
+    }, {
+      resources: '/api/eventcategory/:eventcategoryId',
+      permissions: ['get']
+    }]
+  }]);
 };
 
 /**
@@ -50,6 +78,9 @@ exports.isAllowed = function (req, res, next) {
 
   // If an events is being processed and the current user created it then allow any manipulation
   if (req.event && req.user && req.event.user && req.event.user.id === req.user.id) {
+    return next();
+  }
+    if (req.eventcategory && req.user && req.eventcategory.user && req.eventcategory.user.id === req.user.id) {
     return next();
   }
 
