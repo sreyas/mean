@@ -2,38 +2,38 @@
   'use strict';
 
   angular
-    .module('theaters.services')
-    .factory('TheatersService', TheatersService);
+    .module('events.services')
+    .factory('EventsService', EventsService);
 
-  TheatersService.$inject = ['$resource', '$log'];
+  EventsService.$inject = ['$resource', '$log'];
 
-  function TheatersService($resource, $log) {
-    var Theater = $resource('/api/theaters/:theaterId', {
-      theaterId: '@_id'
+  function EventsService($resource, $log) {
+    var Event = $resource('/api/events/:eventId', {
+      eventId: '@_id'
     }, {
       update: {
         method: 'PUT'
       }
     });
 
-    angular.extend(Theater.prototype, {
+    angular.extend(Event.prototype, {
       createOrUpdate: function () {
-        var theater = this;
-        return createOrUpdate(theater);
+        var event = this;
+        return createOrUpdate(event);
       }
     });
 
-    return Theater;
+    return Event;
 
-    function createOrUpdate(theater) {
-      if (theater._id) {
-        return theater.$update(onSuccess, onError);
+    function createOrUpdate(event) {
+      if (event._id) {
+        return event.$update(onSuccess, onError);
       } else {
-        return theater.$save(onSuccess, onError);
+        return event.$save(onSuccess, onError);
       }
 
       // Handle successful response
-      function onSuccess(theater) {
+      function onSuccess(event) {
         // Any required internal processing from inside the service, goes here.
       }
 
