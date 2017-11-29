@@ -1,0 +1,18 @@
+<section>
+  <div class="page-header">
+    <h1>Theaters</h1>
+  </div>
+  <div class="list-group">
+    <a ng-repeat="theater in vm.theaters" ui-sref="theaters.view({ theaterId: theater._id })" class="list-group-item">
+      <small class="list-group-item-text">
+        Posted on
+        <span ng-bind="theater.created | date:'mediumDate'"></span>
+        by
+        <span ng-if="theater.user" ng-bind="theater.user.displayName"></span>
+        <span ng-if="!theater.user">Deleted User</span>
+      </small>
+      <h4 class="list-group-item-heading" ng-bind="theater.title"></h4>
+      <p class="list-group-item-text" ng-bind="theater.content"></p>
+    </a>
+  </div>
+</section>
