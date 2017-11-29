@@ -17,10 +17,35 @@
        .state('admin.eventcategory.list', {
         url: '/category',
         templateUrl: '/modules/events/client/views/admin/list-events.client.view.html',
-        controller: 'EventsAdminListController',
+        controller: 'EventCategoryAdminListController',
         controllerAs: 'vm',
         data: {
           roles: ['admin']
+        }
+      })
+      .state('admin.eventcategory.create', {
+        url: '/create',
+        templateUrl: '/modules/events/client/views/admin/form-event.client.view.html',
+        controller: 'EventCategoryAdminController',
+        controllerAs: 'vm',
+        data: {
+          roles: ['admin']
+        },
+        resolve: {
+         eventcategoryResolve: newEventCategory
+        }
+      })
+      .state('admin.eventcategory.edit', {
+        url: '/:eventcategoryId/edit',
+        templateUrl: '/modules/events/client/views/admin/form-event.client.view.html',
+        controller: 'EventCategoryAdminController',
+        controllerAs: 'vm',
+        data: {
+          roles: ['admin'],
+          pageTitle: '{{ eventResolve.title }}'
+        },
+        resolve: {
+          eventcategoryResolve: getEventCategory
         }
       })
       .state('admin.events', {
@@ -70,6 +95,11 @@
   function getEvent($stateParams, EventsService) {
     return EventsService.get({
       eventId: $stateParams.eventId
+    }).$promise;
+  }
+    function getEvent($stateParams, EventsService) {
+    return EventsService.get({
+      eventcategoryId: $stateParams.eventcategoryId
     }).$promise;
   }
 
