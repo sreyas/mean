@@ -17,7 +17,7 @@
       .state('admin.theaters.list', {
         url: '',
         templateUrl: '/modules/theaters/client/views/admin/list-theaters.client.view.html',
-        controller: 'TheatersAdminListController',
+        controller: 'TheaterAdminController',
         controllerAs: 'vm',
         data: {
           roles: ['admin']
@@ -26,7 +26,7 @@
       .state('admin.theaters.create', {
         url: '/create',
         templateUrl: '/modules/theaters/client/views/admin/form-theater.client.view.html',
-        controller: 'TheatersAdminController',
+        controller: 'TheaterAdminController',
         controllerAs: 'vm',
         data: {
           roles: ['admin']
@@ -38,7 +38,7 @@
       .state('admin.theaters.edit', {
         url: '/:theaterId/edit',
         templateUrl: '/modules/theaters/client/views/admin/form-theater.client.view.html',
-        controller: 'TheatersAdminController',
+        controller: 'TheaterAdminController',
         controllerAs: 'vm',
         data: {
           roles: ['admin'],
