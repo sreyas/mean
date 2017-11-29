@@ -9,7 +9,7 @@
   function EventCategoryAdminController($scope, $state, $window, eventcategory, Authentication, Notification) {
     var vm = this;
 
-    vm.event = eventcategory;
+    vm.eventcategory = eventcategory;
     vm.authentication = Authentication;
     vm.form = {};
     vm.remove = remove;
@@ -18,7 +18,7 @@
     // Remove existing Event
     function remove() {
       if ($window.confirm('Are you sure you want to delete?')) {
-        vm.event.$remove(function () {
+        vm.eventcategory.$remove(function () {
           $state.go('admin.events.list');
           Notification.success({ message: '<i class="glyphicon glyphicon-ok"></i> Event category deleted successfully!' });
         });
@@ -33,12 +33,12 @@
       }
 
       // Create a new event, or update the current instance
-      vm.event.createOrUpdate()
+      vm.eventcategory.createOrUpdate()
         .then(successCallback)
         .catch(errorCallback);
 
       function successCallback(res) {
-        $state.go('admin.events.list'); // should we send the User to the list or the updated Event's view?
+        $state.go('admin.eventcategory.list'); // should we send the User to the list or the updated Event's view?
         Notification.success({ message: '<i class="glyphicon glyphicon-ok"></i> Event category saved successfully!' });
       }
 
