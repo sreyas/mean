@@ -63,7 +63,7 @@
     function remove() {
       if ($window.confirm('Are you sure you want to delete?')) {
         vm.eventcategory.$remove(function () {
-          $state.go('admin.events.list');
+          $state.go('admin.eventcategory.list');
           Notification.success({ message: '<i class="glyphicon glyphicon-ok"></i> Event category deleted successfully!' });
         });
       }
