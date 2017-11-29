@@ -15,7 +15,7 @@
     });
      Menus.addSubMenuItem('topbar', 'admin', {
       title: 'Manage Event Categories',
-      state: 'admin.events.list'
+      state: 'admin.eventcategory.list'
     });
   }
 }());

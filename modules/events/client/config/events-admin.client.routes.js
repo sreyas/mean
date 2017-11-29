@@ -23,6 +23,15 @@
           roles: ['admin']
         }
       })
+     .state('admin.eventcategory.list', {
+        url: '/category',
+        templateUrl: '/modules/events/client/views/admin/list-events.client.view.html',
+        controller: 'EventsAdminListController',
+        controllerAs: 'vm',
+        data: {
+          roles: ['admin']
+        }
+      })
       .state('admin.events.create', {
         url: '/create',
         templateUrl: '/modules/events/client/views/admin/form-event.client.view.html',

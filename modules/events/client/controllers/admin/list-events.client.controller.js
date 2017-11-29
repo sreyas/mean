@@ -9,7 +9,6 @@
 
   function EventsAdminListController(EventsService) {
     var vm = this;
-
     vm.events = EventsService.query();
   }
 }());
