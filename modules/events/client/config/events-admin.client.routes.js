@@ -25,7 +25,7 @@
       })
       .state('admin.eventcategory.create', {
         url: '/create',
-        templateUrl: '/modules/events/client/views/admin/form-event.client.view.html',
+        templateUrl: '/modules/events/client/views/admin/form-eventcategory.client.view.html',
         controller: 'EventCategoryAdminController',
         controllerAs: 'vm',
         data: {
@@ -37,12 +37,12 @@
       })
       .state('admin.eventcategory.edit', {
         url: '/:eventcategoryId/edit',
-        templateUrl: '/modules/events/client/views/admin/form-event.client.view.html',
+        templateUrl: '/modules/events/client/views/admin/form-eventcategory.client.view.html',
         controller: 'EventCategoryAdminController',
         controllerAs: 'vm',
         data: {
           roles: ['admin'],
-          pageTitle: '{{ eventResolve.title }}'
+          pageTitle: '{{ eventcategoryResolve.title }}'
         },
         resolve: {
           eventcategoryResolve: getEventCategory
