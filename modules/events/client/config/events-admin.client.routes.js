@@ -15,7 +15,7 @@
         template: '<ui-view/>'
       })
        .state('admin.eventcategory.list', {
-        url: '/category',
+        url: '',
         templateUrl: '/modules/events/client/views/admin/list-eventcategory.client.view.html',
         controller: 'EventCategoryAdminListController',
         controllerAs: 'vm',
