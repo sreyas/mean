@@ -7,10 +7,10 @@
 
   EventsController.$inject = ['$scope', 'eventResolve', 'Authentication'];
 
-  function EventsController($scope, theater, Authentication) {
+  function EventsController($scope, event, Authentication) {
     var vm = this;
 
-    vm.theater = theater;
+    vm.event = event;
     vm.authentication = Authentication;
 
   }
