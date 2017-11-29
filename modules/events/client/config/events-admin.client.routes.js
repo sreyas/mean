@@ -97,7 +97,7 @@
       eventId: $stateParams.eventId
     }).$promise;
   }
-    function getEvent($stateParams, EventsService) {
+    function getEventCategory($stateParams, EventsService) {
     return EventsService.get({
       eventcategoryId: $stateParams.eventcategoryId
     }).$promise;
@@ -106,6 +106,9 @@
   newEvent.$inject = ['EventsService'];
 
   function newEvent(EventsService) {
+    return new EventsService();
+  }
+   function newEventCategory(EventsService) {
     return new EventsService();
   }
 }());
