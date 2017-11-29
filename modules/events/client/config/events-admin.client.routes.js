@@ -9,6 +9,20 @@
 
   function routeConfig($stateProvider) {
     $stateProvider
+    .state('admin.eventcategory', {
+        abstract: true,
+        url: '/eventcategory',
+        template: '<ui-view/>'
+      })
+       .state('admin.eventcategory.list', {
+        url: '/category',
+        templateUrl: '/modules/events/client/views/admin/list-events.client.view.html',
+        controller: 'EventsAdminListController',
+        controllerAs: 'vm',
+        data: {
+          roles: ['admin']
+        }
+      })
       .state('admin.events', {
         abstract: true,
         url: '/events',
@@ -23,15 +37,7 @@
           roles: ['admin']
         }
       })
-     .state('admin.eventcategory.list', {
-        url: '/category',
-        templateUrl: '/modules/events/client/views/admin/list-events.client.view.html',
-        controller: 'EventsAdminListController',
-        controllerAs: 'vm',
-        data: {
-          roles: ['admin']
-        }
-      })
+    
       .state('admin.events.create', {
         url: '/create',
         templateUrl: '/modules/events/client/views/admin/form-event.client.view.html',
