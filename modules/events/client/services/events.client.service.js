@@ -3,7 +3,7 @@
 
   angular
     .module('events.services')
-    factory('EventCategoryService', EventCategoryService),
+    .factory('EventCategoryService', EventCategoryService),
     .factory('EventsService', EventsService);
 
   EventsService.$inject = ['$resource', '$log'];
