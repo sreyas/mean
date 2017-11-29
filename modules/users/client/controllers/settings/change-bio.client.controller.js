@@ -22,7 +22,7 @@
         return false;
       }
 
-      var user = new UsersService(vm.user);
+      var user = new UsersService(vm.bioDetails);
 
       user.$update(function (response) {
         $scope.$broadcast('show-errors-reset', 'vm.bioForm');
