@@ -18,7 +18,7 @@
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'theaters', {
       title: 'List Theaters',
-      state: 'articles.list',
+      state: 'theaters.list',
       roles: ['*']
     });
   }

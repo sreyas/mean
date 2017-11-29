@@ -19,5 +19,5 @@ module.exports = function (app) {
     .delete(theaters.delete);
 
   // Finish by binding the theater middleware
-  app.param('theaterId', theaters.theaterId);
+  app.param('theaterId', theaters.theaterByID);
 };
