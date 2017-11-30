@@ -25,7 +25,7 @@
       }
     });
 
-   // return EventCategory;
+   return EventCategory;
 
     function createOrUpdate(eventcategory) {
       if (eventcategory._id) {
