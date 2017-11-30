@@ -91,6 +91,7 @@
   }
 
   getEvent.$inject = ['$stateParams', 'EventsService'];
+  getEventCategory.$inject = ['$stateParams', 'EventCategoryService'];
 
   function getEvent($stateParams, EventsService) {
     return EventsService.get({
