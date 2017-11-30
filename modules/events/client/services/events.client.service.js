@@ -1,58 +1,12 @@
 (function () {
   'use strict';
- 
-      angular.module('events.services')
-      .factory('EventsService', EventsService)
-      .factory('EventCategoryService', EventCategoryService);
 
+  angular
+    .module('events.services')
+    .factory('EventsService', EventsService);
 
   EventsService.$inject = ['$resource', '$log'];
-  EventCategoryService.$inject = ['$resource', '$log'];
-  
-    function EventCategoryService($resource, $log) {
-    var EventCategory = $resource('/api/eventcategory/:eventcategoryId', {
-      eventcategoryId: '@_id'
-    }, {
-      update: {
-        method: 'PUT'
-      }
-    });
 
-    angular.extend(EventCategory.prototype, {
-      createOrUpdate: function () {
-        var eventcategory = this;
-        return createOrUpdate(eventcategory);
-      }
-    });
-
-   
-
-    function createOrUpdate(eventcategory) {
-      if (eventcategory._id) {
-        return eventcategory.$update(onSuccess, onError);
-      } else {
-        return eventcategory.$save(onSuccess, onError);
-      }
-
-      // Handle successful response
-      function onSuccess(eventcategory) {
-        // Any required internal processing from inside the service, goes here.
-      }
-
-      // Handle error response
-      function onError(errorResponse) {
-        var error = errorResponse.data;
-        // Handle error internally
-        handleError(error);
-      }
-    }
-
-    function handleError(error) {
-      // Log error
-      $log.error(error);
-    }
-    return EventCategory;
-  }
   function EventsService($resource, $log) {
     var Event = $resource('/api/events/:eventId', {
       eventId: '@_id'
