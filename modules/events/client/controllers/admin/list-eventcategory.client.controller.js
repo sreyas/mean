@@ -5,10 +5,10 @@
     .module('events.admin')
     .controller('EventCategoryAdminListController', EventCategoryAdminListController);
 
-  EventCategoryAdminListController.$inject = ['EventCategoryService'];
+  EventCategoryAdminListController.$inject = ['EventsService'];
 
-  function EventCategoryAdminListController(EventCategoryService) {
+  function EventCategoryAdminListController(EventsService) {
     var vm = this;
-    vm.eventcategory = EventCategoryService.query();
+    vm.eventcategory = EventsService.query();
   }
 }());
