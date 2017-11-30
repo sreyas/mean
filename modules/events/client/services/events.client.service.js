@@ -10,6 +10,7 @@
   EventCategoryService.$inject = ['$resource', '$log'];
   
     function EventCategoryService($resource, $log) {
+    	console.log("saranya");)
     var EventCategory = $resource('/api/eventcategory/:eventcategoryId', {
       eventcategoryId: '@_id'
     }, {
