@@ -25,7 +25,7 @@
       }
     });
 
-   return EventCategory;
+   
 
     function createOrUpdate(eventcategory) {
       if (eventcategory._id) {
@@ -51,6 +51,7 @@
       // Log error
       $log.error(error);
     }
+    return EventCategory;
   }
   function EventsService($resource, $log) {
     var Event = $resource('/api/events/:eventId', {
