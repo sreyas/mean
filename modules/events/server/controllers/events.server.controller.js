@@ -119,3 +119,31 @@ exports.eventByID = function (req, res, next, id) {
   });
 };
 
+/**
+ * Event middleware
+ */
+exports.eventcategoryByID = function (req, res, next, id) {
+
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res.status(400).send({
+      message: 'Event category is invalid'
+    });
+  }
+
+  EventCategory.findById(id).populate('user', 'displayName').exec(function (err, eventcategory) {
+    if (err) {
+      return next(err);
+    } else if (!eventcategory) {
+      return res.status(404).send({
+        message: 'No event category with that identifier has been found'
+      });
+    }
+    req.eventcategory = eventcategory;
+    next();
+  });
+};
+
+
+
+
+
