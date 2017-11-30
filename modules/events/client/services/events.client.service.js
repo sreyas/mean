@@ -14,7 +14,7 @@
   EventCategoryService.$inject = ['$resource', '$log'];
   
     function EventCategoryService($resource, $log) {
-    var Event = $resource('/api/eventcategory/:eventcategoryId', {
+    var EventCategory = $resource('/api/eventcategory/:eventcategoryId', {
       eventcategoryId: '@_id'
     }, {
       update: {
@@ -22,24 +22,24 @@
       }
     });
 
-    angular.extend(Event.prototype, {
+    angular.extend(EventCategory.prototype, {
       createOrUpdate: function () {
-        var event = this;
-        return createOrUpdate(event);
+        var eventcategory = this;
+        return createOrUpdate(eventcategory);
       }
     });
 
-    return Event;
+    return EventCategory;
 
-    function createOrUpdate(event) {
-      if (event._id) {
-        return event.$update(onSuccess, onError);
+    function createOrUpdate(eventcategory) {
+      if (eventcategory._id) {
+        return eventcategory.$update(onSuccess, onError);
       } else {
-        return event.$save(onSuccess, onError);
+        return eventcategory.$save(onSuccess, onError);
       }
 
       // Handle successful response
-      function onSuccess(event) {
+      function onSuccess(eventcategory) {
         // Any required internal processing from inside the service, goes here.
       }
 
