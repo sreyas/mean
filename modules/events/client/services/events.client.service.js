@@ -1,14 +1,10 @@
 (function () {
   'use strict';
+ 
+      angular.module('events.services')
+      .factory('EventsService', EventsService)
+      .factory('EventCategoryService', EventCategoryService);
 
-  angular
-    .module('events.services')    
-    .factory('EventsService', EventsService);
-    
-    angular
-    .module('events.services')
-    .factory('EventCategoryService', EventCategoryService);
-    
 
   EventsService.$inject = ['$resource', '$log'];
   EventCategoryService.$inject = ['$resource', '$log'];
