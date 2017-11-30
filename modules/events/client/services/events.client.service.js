@@ -15,9 +15,13 @@ return $resource('/api/events/:eventId', {
 myApp.factory('EventCategoryService', ['$resource', function ($resource) {
 
 
-    
-    // Github REST API
-    return $resource('https://api.github.com/meta');
+    return $resource('/api/eventcategory/:eventcategoryId', {
+      eventcategoryId: '@_id'
+    }, {
+      update: {
+        method: 'PUT'
+      }
+    });
 }]);
 
 }());
