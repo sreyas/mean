@@ -191,6 +191,7 @@ exports.delete = function (req, res) {
  */
 exports.list = function (req, res) {
   EventCategory.find().sort('-created').populate('user', 'displayName').exec(function (err, eventcategory) {
+  	console.log("saranya");
     if (err) {
       return res.status(422).send({
         message: errorHandler.getErrorMessage(err)
