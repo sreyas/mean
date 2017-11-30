@@ -1,6 +1,6 @@
 (function () {
   'use strict';
- var myApp = angular.module('events.services', ['ngResource']);
+ var myApp = angular.module('events.admin', ['ngResource']);
  myApp.factory('EventsService', ['$resource', function ($resource) {
 
 return $resource('/api/events/:eventId', {
