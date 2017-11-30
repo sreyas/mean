@@ -4,8 +4,7 @@
  * Module dependencies
  */
 var path = require('path'),
-  mongoose = require('mongoose'),
-  Event = mongoose.model('Event'),
+  mongoose = require('mongoose'),  
   EventCategory = mongoose.model('EventCategory'),
   errorHandler = require(path.resolve('./modules/core/server/controllers/errors.server.controller'));
 
@@ -120,7 +119,7 @@ exports.eventByID = function (req, res, next, id) {
 };
 
 /**
- * Event middleware
+ * EventCategory middleware
  */
 exports.eventcategoryByID = function (req, res, next, id) {
 
