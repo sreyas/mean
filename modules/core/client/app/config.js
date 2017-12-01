@@ -6,7 +6,8 @@
   var service = {
     applicationEnvironment: window.env,
     applicationModuleName: applicationModuleName,
-    applicationModuleVendorDependencies: ['ngResource','ngAnimate','ngAria','ngMessages','ui.router', 'ngFileUpload', 'ui-notification','ngMaterial'],
+    //applicationModuleVendorDependencies: ['ngResource', 'ngMessages', 'ui.router', 'ngFileUpload', 'ui-notification',],
+    applicationModuleVendorDependencies:['ngMaterial',["ng","ngAnimate","ngAria"],],
     registerModule: registerModule
   };
 
@@ -19,7 +20,7 @@
 
     // Add the module to the AngularJS configuration file
     angular.module(applicationModuleName).requires.push(moduleName);
-    
+   // angular.module('ngMaterial', ["ng","ngAnimate","ngAria"]);
   }
 
   // Angular-ui-notification configuration
