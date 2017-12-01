@@ -7,9 +7,9 @@
     applicationEnvironment: window.env,
     applicationModuleName: applicationModuleName,
     //applicationModuleVendorDependencies: ['ngResource', 'ngMessages', 'ui.router', 'ngFileUpload', 'ui-notification',],
-    applicationModuleVendorDependencies:['ngResource', 'ngCookies',
-        'ngAnimate', 'ngTouch', 'ngSanitize', 'ui.router',
-        'ui.bootstrap', 'ui.utils', 'ngMaterial'
+    applicationModuleVendorDependencies:['ngResource', 'ngMessages',
+      'ngFileUpload','ui-notification',  'ngAnimate', 'ngTouch', 'ngSanitize', 'ui.router',
+        , 'ui.utils', 'ngMaterial'
     ],
     registerModule: registerModule
   };
