@@ -8,7 +8,7 @@
     applicationModuleName: applicationModuleName,
     //applicationModuleVendorDependencies: ['ngResource', 'ngMessages', 'ui.router', 'ngFileUpload', 'ui-notification',],
     applicationModuleVendorDependencies:['ngResource', 'ngMessages',
-      'ngFileUpload','ui-notification',  'ngAnimate', 'ngTouch', 'ngSanitize', 'ui.router',
+      'ngFileUpload','ui-notification',  'ngAnimate', 'ui.router',
         , 'ui.utils', 'ngMaterial'
     ],
     registerModule: registerModule
