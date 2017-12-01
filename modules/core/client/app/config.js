@@ -9,7 +9,7 @@
     //applicationModuleVendorDependencies: ['ngResource', 'ngMessages', 'ui.router', 'ngFileUpload', 'ui-notification',],
     applicationModuleVendorDependencies:['ngResource', 'ngMessages',
       'ngFileUpload','ui-notification',  'ngAnimate', 'ui.router',
-        , 'ui.utils', 'ngMaterial'
+        , 'ngMaterial'
     ],
     registerModule: registerModule
   };
