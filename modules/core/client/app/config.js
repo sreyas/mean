@@ -7,7 +7,7 @@
     applicationEnvironment: window.env,
     applicationModuleName: applicationModuleName,
    // applicationModuleVendorDependencies: ['ngMaterial'],
- applicationModuleVendorDependencies: ['ngResource', 'ngCookies',
+ applicationModuleVendorDependencies: ['ngResource', 'ngMessages',
         'ngAnimate', 'ngTouch', 'ngSanitize', 'ui.router',
         'ui.bootstrap', 'ui.utils', 'ngMaterial'
     ],
