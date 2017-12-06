@@ -26,7 +26,6 @@
    'ui-notification',
     'ngAnimate',
     'ngAria',
-    'ngMessages',
     'ngMaterial' ]);
 
     // Add the module to the AngularJS configuration file
