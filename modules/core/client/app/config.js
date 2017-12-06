@@ -23,7 +23,7 @@
     'ngMessages',
     'ui.router',
     'ngFileUpload', 
-   'ui-notification'
+   'ui-notification',
     'ngAnimate',
     'ngAria',
     'ngMessages',
