@@ -16,7 +16,7 @@
   // Add a new vertical module
   function registerModule(moduleName, dependencies) {
     // Create angular module
-    angular.module(moduleName, dependencies || []);
+    //angular.module(moduleName, dependencies || []);
    angular.module(moduleName, [
     'ngResource',
     'ngMessages',
