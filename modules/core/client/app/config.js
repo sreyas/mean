@@ -25,6 +25,7 @@
     'ngFileUpload', 
    'ui-notification',
     'ngAnimate',   
+     'ngAria',   
     'ngMaterial' ]);
 
     // Add the module to the AngularJS configuration file
