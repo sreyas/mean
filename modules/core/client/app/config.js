@@ -8,7 +8,7 @@
     applicationModuleName: applicationModuleName,
    // applicationModuleVendorDependencies: ['ngMaterial'],
  applicationModuleVendorDependencies: ['ngResource', 'ngMessages',
-        'ngAnimate', 'ngTouch', 'ngSanitize', 'ui.router',
+        'ngAnimate', 'ui.router',
         'ui.bootstrap', 'ui.utils', 'ngMaterial'
     ],
     registerModule: registerModule
