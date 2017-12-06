@@ -6,11 +6,8 @@ module.exports = {
   client: {
     lib: {
       css: [
-        // bower:css
-        'public/lib/angular-ui-notification/dist/angular-ui-notification.min.css',
-        //'public/lib/bootstrap/dist/css/bootstrap.min.css',
-        //'public/lib/bootstrap/dist/css/bootstrap-theme.min.css',
-        'public/lib/angular-material/angular-material.min.js',
+
+        'public/lib/angular-ui-notification/dist/angular-ui-notification.min.css', 
         'public/lib/angular-material/angular-material.css'
         // endbower
       ],
@@ -20,6 +17,7 @@ module.exports = {
         'public/lib/angular-animate/angular-animate.min.js',
         'public/lib/angular-bootstrap/ui-bootstrap-tpls.min.js',
         'public/lib/angular-messages/angular-messages.min.js',
+        'public/lib/angular-material/angular-material.js',
         'public/lib/angular-mocks/angular-mocks.js',
         'public/lib/angular-resource/angular-resource.min.js',
         'public/lib/angular-ui-notification/dist/angular-ui-notification.min.js',
