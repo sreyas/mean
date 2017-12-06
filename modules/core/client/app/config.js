@@ -18,15 +18,12 @@
     // Create angular module
     angular.module(moduleName, dependencies || []);
  angular.module(moduleName, [
-    'ng',
     'ngResource',
     'ngMessages',
     'ui.router',
     'ngFileUpload', 
-   'ui-notification',
-    'ngAnimate',   
-     'ngAria',   
-    'ngMaterial' ]);
+   'ui-notification',     
+    'ngMaterial' ["ng","ngAnimate","ngAria"]);
 
     // Add the module to the AngularJS configuration file
     angular.module(applicationModuleName).requires.push(moduleName);
