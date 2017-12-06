@@ -7,7 +7,7 @@
     applicationEnvironment: window.env,
     applicationModuleName: applicationModuleName,
     //applicationModuleVendorDependencies: ['ngResource', 'ngMessages', 'ui.router', 'ngFileUpload', 'ui-notification'],
-    applicationModuleVendorDependencies:['ngResource', 'ngMessages', 'ui.router', 'ngFileUpload', 'ui-notification'],
+    applicationModuleVendorDependencies: ['ngResource','ngAnimate ', 'ngMessages', 'ui.router', 'ngFileUpload', 'ui.notification'],
     registerModule: registerModule
   };
 
@@ -16,17 +16,7 @@
   // Add a new vertical module
   function registerModule(moduleName, dependencies) {
     // Create angular module
-    //angular.module(moduleName, dependencies || []);
-   /*angular.module(moduleName, [
-    'ngResource',
-    'ngMessages',
-    'ui.router',
-    'ngFileUpload', 
-   'ui-notification',     
-    'ngMaterial' ["ng","ngAnimate","ngAria"]]);*/
-
-   angular.module('ngMaterial', ["ng","ngAnimate","ngAria",'ngResource','ngMessages','ui.router','ngFileUpload', 'ui-notification']);
-
+    angular.module(moduleName, dependencies || []);
 
     // Add the module to the AngularJS configuration file
     angular.module(applicationModuleName).requires.push(moduleName);
