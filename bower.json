@@ -33,6 +33,6 @@
     "angular-material.css"
   ],
   "resolutions": {
-    "angular": "^1.6.7"
+    "angular": "~1.3"
   }
 }
