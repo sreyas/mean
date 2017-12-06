@@ -19,8 +19,8 @@
     angular.module(moduleName, dependencies || []);
  angular.module(moduleName, [
     'ng',
-    'ngResource'
-    'ngMessages'
+    'ngResource',
+    'ngMessages',
     'ui.router',
     'ngFileUpload', 
    'ui-notification'
