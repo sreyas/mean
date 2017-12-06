@@ -18,9 +18,10 @@
     angular.module(moduleName, dependencies || []);
 
     // Add the module to the AngularJS configuration file
-    angular.module(applicationModuleName).requires.push(moduleName);
-    angular.module('ngMaterial', ["ng","ngAnimate","ngAria"]);
+    angular.module(applicationModuleName).requires.push(moduleName);   
+    angular.module( 'mean', [ 'ngMaterial' ] )
   }
+
 
   // Angular-ui-notification configuration
   angular.module('ui-notification').config(function (NotificationProvider) {
