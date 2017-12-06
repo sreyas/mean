@@ -17,13 +17,16 @@
   function registerModule(moduleName, dependencies) {
     // Create angular module
     //angular.module(moduleName, dependencies || []);
-   angular.module(moduleName, [
+   /*angular.module(moduleName, [
     'ngResource',
     'ngMessages',
     'ui.router',
     'ngFileUpload', 
    'ui-notification',     
-    'ngMaterial' ["ng","ngAnimate","ngAria"]]);
+    'ngMaterial' ["ng","ngAnimate","ngAria"]]);*/
+
+   angular.module('ngMaterial', ["ng","ngAnimate","ngAria",'ngResource','ngMessages','ui.router','ngFileUpload', 'ui-notification']);
+
 
     // Add the module to the AngularJS configuration file
     angular.module(applicationModuleName).requires.push(moduleName);
