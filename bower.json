@@ -41,5 +41,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "devDependencies": {
+    "angular-material": "^1.1.5"
+  }
 }
