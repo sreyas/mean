@@ -6,17 +6,9 @@
     "https://github.com/meanjs/mean/graphs/contributors"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/sreyas/mean",
-  "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
+  "homepage": "https://github.com/sreyas/mean", 
   "dependencies": {
-    "angular": "^1.6.7",
+     "angular": "^1.6.7",
     "angular-animate": "^1.6.7",
     "angular-resource": "^1.6.7",
     "angular-messages": "^1.6.7",
@@ -28,6 +20,6 @@
     "angular-material": "^1.1.5",
     "angular-aria": "^1.6.7",
     "owasp-password-strength-test": "^1.3.0",
-    "bootstrap": "^3.3.7"
+     "bootstrap": "^3.3.7"
   }
 }
