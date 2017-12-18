@@ -6,8 +6,7 @@
   var service = {
     applicationEnvironment: window.env,
     applicationModuleName: applicationModuleName,
-   // applicationModuleVendorDependencies: ['ngResource',  'ngMessages', 'ui.router', 'ui.bootstrap', 'ngFileUpload', 'ui-notification','ngMaterial'],
-    applicationModuleVendorDependencies: ['ngResource', 'ui.router', 'ui.bootstrap',  'ngMaterial'],
+    applicationModuleVendorDependencies: ['ngResource', 'ngAnimate', 'ngMessages', 'ui.router', 'ui.bootstrap', 'ngFileUpload', 'ui-notification'],
     registerModule: registerModule
   };
 
