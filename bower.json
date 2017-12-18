@@ -1,29 +1,33 @@
 {
   "name": "meanjs",
-  "description": "Fullstack JavaScript with MongoDB, Express, AngularJS, and Node.js.",
-  "homepage": "http://meanjs.org/",
+  "description": "Full-Stack JavaScript with MongoDB, Express, AngularJS, and Node.js.",
+  "main": "",
+  "authors": [
+    "https://github.com/meanjs/mean/graphs/contributors"
+  ],
   "license": "MIT",
+  "homepage": "https://github.com/sreyas/mean",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
   "dependencies": {
-    "bootstrap": "~3",
-    "angular": "~1.3",
-    "angular-resource": "~1.3",
-    "angular-animate": "~1.3",
-    "angular-mocks": "~1.3",
-    "angular-bootstrap": "~0.11.0",
-    "angular-ui-router": "~0.2.10",
-    "angular-file-upload": "~1.1.5",
-    "angular-material": "^1.1.5"
-  },
-  "overrides": {
-    "bootstrap": {
-      "main": [
-        "dist/css/bootstrap.css",
-        "dist/css/bootstrap-theme.css",
-        "less/bootstrap.less"
-      ]
-    },
-    "jquery": {
-      "main": []
-    }
+    "angular": "^1.6.7",
+    "angular-animate": "^1.6.7",
+    "angular-resource": "^1.6.7",
+    "angular-messages": "^1.6.7",
+    "angular-bootstrap": "^2.5.0",
+    "angular-mocks": "^1.6.7",
+    "angular-ui-notification": "^0.3.6",
+    "angular-ui-router": "^1.0.11",
+    "ng-file-upload": "^12.2.13",
+    "angular-material": "^1.1.5",
+    "angular-aria": "^1.6.7",
+    "owasp-password-strength-test": "^1.3.0",
+    "bootstrap": "^3.3.7"
   }
 }
