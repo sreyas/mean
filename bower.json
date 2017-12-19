@@ -8,7 +8,8 @@
   "license": "MIT",
   "homepage": "https://github.com/sreyas/mean",
   "dependencies": {
-    "angular-file-upload": "~1.1.5"
+    "angular-file-upload": "~1.1.5",
+    "angular-aria": "^1.6.7"
   },
   "ignore": [
     "**/.*",
