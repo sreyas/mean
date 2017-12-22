@@ -1,0 +1,26 @@
+<section>
+  <div class="page-header">
+    <h1>{{vm.eventcategory._id ? 'Edit Event Category' : 'New Event Category'}}</h1>
+  </div>
+  <div class="pull-right">
+    <a ng-show="vm.eventcategory._id" class="btn btn-primary" ng-click="vm.remove()">
+      <i class="glyphicon glyphicon-trash"></i>
+    </a>
+  </div>
+  <div class="col-md-12">
+    <form name="vm.form.eventcategoryForm" class="form-horizontal" ng-submit="vm.save(vm.form.eventcategoryForm.$valid)" novalidate>
+      <fieldset>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="title">Title</label>
+          <input name="title" type="text" ng-model="vm.eventcategory.title" id="title" class="form-control" placeholder="Title" required autofocus>
+          <div ng-messages="vm.form.eventcategoryForm.title.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Event Categorytitle is required.</p>
+          </div>
+        </div>      
+        <div class="form-group">
+          <button type="submit" class="btn btn-default">{{vm.eventcategory._id ? 'Update' : 'Create'}}</button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</section>

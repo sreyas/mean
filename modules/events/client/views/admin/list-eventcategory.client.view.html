@@ -1,0 +1,27 @@
+﻿<section>
+  <div class="page-header">
+    <h1>
+      Event categories
+      <a class="btn btn-primary pull-right" data-ui-sref="admin.eventcategory.create">
+        <i class="glyphicon glyphicon-plus"></i>
+      </a>
+    </h1>
+  </div>
+
+  <div class="list-group">
+    <a data-ng-repeat="eventcategory in vm.eventcategory" data-ui-sref="admin.eventcategory.edit({eventcategoryId: eventcategory._id})" class="list-group-item">
+      <small class="list-group-item-text">
+        Posted on
+        <span data-ng-bind="eventcategory.created | date:'mediumDate'"></span>
+        by
+        <span ng-if="eventcategory.user" ng-bind="eventcategory.user.displayName"></span>
+        <span ng-if="!eventcategory.user">Deleted User</span>
+      </small>
+      <h4 class="list-group-item-heading" data-ng-bind="eventcategory.title"></h4>
+      <p class="list-group-item-text" data-ng-bind="eventcategory.content"></p>
+    </a>
+  </div>
+  <div class="alert alert-warning text-center" data-ng-if="eventcategory.$resolved && !eventcategory.length">
+    No event category yet, why don't you <a data-ui-sref="admin.eventcategory.create">create one</a>?
+  </div>
+</section>
