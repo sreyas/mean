@@ -9,5 +9,5 @@ var app = require(path.resolve('./config/lib/app'));
 
 app.init(function () {
   console.log('Initialized test automation');
-  console.log('Testing log for patch');
+  console.log('New row inserted');
 });
